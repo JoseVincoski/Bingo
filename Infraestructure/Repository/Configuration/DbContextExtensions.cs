@@ -8,9 +8,9 @@ namespace Repository.Configuration
     {
         public static IServiceCollection AddAppDbContext(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<AppDbContext>(options => {
-                options.UseSqlServer(connectionString);
-            });
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(connectionString)
+            );
 
             return services;
         }
